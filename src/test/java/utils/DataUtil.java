@@ -4,13 +4,14 @@ import base.BaseTest;
 import org.testng.annotations.DataProvider;
 import org.yaml.snakeyaml.Yaml;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Map;
 
 public class DataUtil extends BaseTest {
     @DataProvider
-    public static Object [][] dataProvider(){
+    public static Object [][] dataProvider1(){
         return readYaml("src/main/resources/data1.yaml","data1");
     }
     @DataProvider
@@ -49,7 +50,7 @@ public class DataUtil extends BaseTest {
     private static Object [][] readYaml(String filePath, String yamlObject){
         InputStream inputStream = null;
         try {
-            inputStream = new fileInputStream(filePath);
+            inputStream = new FileInputStream(filePath);
 
         }
         catch (FileNotFoundException e){

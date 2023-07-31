@@ -1,7 +1,9 @@
 package tests;
 
 import base.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.*;
 import utils.DataUtil;
 
 import java.util.HashMap;
@@ -22,7 +24,7 @@ public class ShoppingTest extends BaseTest{
         Overview overview = checkout.clickContinueButton();
         Assert.assertEquals(overview.getItemTotal(), "Item total: $29.99", "Not expected price");
         CompleteCheckout completeCheckout = overview.clickFinish();
-        Assert.assertEquals(completeCheckout.getShoppingText(),
+        Assert.assertEquals(completeCheckout.getFinishShoppingText(),
                 "Thank you for your order!",
                 "Not expected text");
     }

@@ -1,3 +1,5 @@
+package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -16,7 +18,7 @@ public class Product {
         driver.findElement(addToCartButton).click();
 
     }
-    public Home clickBackToProducts(){
+    public Home clickBackToProductsButton(){
         driver.findElement(backToProducts).click();
         return new Home(driver);
 
@@ -28,6 +30,10 @@ public class Product {
     }
     public String getProductName(){
         return driver.findElement(productName).getText();
+    }
+    public Home clickBackToProducts(){
+        driver.findElement(By.id("back-to-products"));
+        return new Home(driver);
     }
 
 

@@ -1,3 +1,5 @@
+package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,17 +8,16 @@ import java.util.List;
 
 public class Home {
 
-    private WebDriver driver;
     private By title = By.className("title");
     private By cart = By.className("shopping_cart_badge");
     private By cartLogoNumber = By.className("shopping_cart_badge");
-
+    public WebDriver driver;
     public Home(WebDriver driver){
         this.driver = driver;
 
     }
-    public Product clickProduct(String product){
-        driver.findElement(By.linkText(product)).click();
+    public Product clickProductName(String productName){
+        driver.findElement(By.linkText(productName)).click();
         return new Product(driver);
 
     }
@@ -34,7 +35,7 @@ public class Home {
 
     }
     public void clickRemoveFromHomeByIndex(int index){
-        List<WebElement> buttons = driver.findElements((By.className("btn_small"));
+        List<WebElement> buttons = driver.findElements(By.className("btn_small"));
         buttons.get(index).click();
     }
     public int countRemoveButtons(){

@@ -5,17 +5,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import pages.Home;
+import pages.Login;
 
 public class BaseTest {
     protected WebDriver driver;
     protected Home home;
-
     public Login login;
 
     @BeforeClass
     public void setUp(){
         driver = new ChromeDriver();
-        System.setProperty("web-driver.chrome.driver","src/main/resources/chromedriver.exe");
+        System.setProperty("web-driver.chrome.driver","src\\main\\resources\\chromedriver.exe");
         this.backToLogin();
         driver.manage().window().maximize();
     }

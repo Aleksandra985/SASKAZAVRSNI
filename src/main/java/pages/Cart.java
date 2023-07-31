@@ -1,3 +1,5 @@
+package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,13 +10,14 @@ public class Cart {
     private WebDriver driver;
     private By remove = By.className("btn_small");
     private By checkout = By.id("checkout");
+    private By pageName = By.className("title");
 
     public Cart(WebDriver driver){
         this.driver = driver;
 
     }
     public int countItems(){
-        return  driver.findElement(remove).size();
+        return  driver.findElements(remove).size();
 
     }
     public void clickRemoveByIndex(int index){

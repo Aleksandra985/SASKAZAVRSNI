@@ -3,12 +3,16 @@ package tests;
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.Cart;
+import pages.Checkout;
+import pages.Home;
+import pages.Overview;
 import utils.DataUtil;
 
 import java.util.HashMap;
 
 public class FinalePriceTests extends BaseTest {
-    @Test(dataProviderClass = DataUtil.class, dataProvider = "dataProvider")
+    @Test(dataProviderClass = DataUtil.class, dataProvider = "dataProvider1")
     public void getItemTotalTest(HashMap<String, String> hashMap) {
         login.setUsername(hashMap.get("username"));
         login.setPassword(hashMap.get("password"));
