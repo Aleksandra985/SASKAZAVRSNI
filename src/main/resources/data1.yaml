@@ -1,0 +1,38 @@
+data1:
+  username: "standard_user"
+  password: "secret_sauce"
+  firstName: "Aleksandra"
+  lastName: "Zivadinovic"
+  postalCode: "11000"
+
+data2:
+  username: "locked_out_user"
+  password: "secret_sauce"
+
+data3:
+  username: "problem_user"
+  password: "secret_sauce"
+
+data4:
+  username: "performance_glitch_user"
+  password: "secret_sauce"
+
+data5:
+  username: "standard_user"
+  password: ""
+
+data6:
+  username: ""
+  password: "secret_sauce"
+
+data7:
+  username: "Aleksandra085"
+  password: "secret_sauce"
+
+data8:
+  username: "standard_user"
+  password: "Aleksandra085"
+
+data9:
+  username: ""
+  password: ""
