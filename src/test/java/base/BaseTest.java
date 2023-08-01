@@ -9,9 +9,8 @@ import pages.Home;
 import pages.Login;
 
 public class BaseTest {
-    protected WebDriver driver;
-    protected Home home;
-    public Login login;
+    private WebDriver driver;
+    protected Login login;
 
     @BeforeClass
     public void setUp(){
@@ -33,5 +32,5 @@ public class BaseTest {
     }
 
 
-    }
+}
 

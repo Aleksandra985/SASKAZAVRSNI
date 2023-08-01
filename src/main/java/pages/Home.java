@@ -7,11 +7,11 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class Home {
-
-    private By title = By.className("title");
-    private By cart = By.className("shopping_cart_badge");
-    private By cartLogoNumber = By.className("shopping_cart_badge");
     public WebDriver driver;
+    private final By title = By.className("title");
+    private final By cart = By.className("shopping_cart_badge");
+    private final By cartLogoNumber = By.className("shopping_cart_badge");
+
     public Home(WebDriver driver){
         this.driver = driver;
 

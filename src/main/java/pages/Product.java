@@ -7,7 +7,7 @@ public class Product {
     private WebDriver driver;
     private By addToCartButton = By.className("btn_primary");
     private By backToProducts = By.id("back-to-products");
-    private By cart = By.className("inventory_details_name");
+    private By cart = By.className("shopping_cart_link");
     private By productName = By.className("inventory_details_name");
 
     public Product(WebDriver driver){

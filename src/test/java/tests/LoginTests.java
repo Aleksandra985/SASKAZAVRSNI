@@ -11,7 +11,7 @@ public class LoginTests extends BaseTest {
         login.setUsername("standard_user");
         login.setPassword("secret_sauce");
         Home home = login.clickLoginButton();
-        Assert.assertEquals(home.getTitle(), "products", "Not expected");
+        Assert.assertEquals(home.getTitle(), "Products", "Not expected");
     }
     @Test
     public void lockedUsedLoginTest() {

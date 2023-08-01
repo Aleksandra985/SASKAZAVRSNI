@@ -14,7 +14,7 @@ public class DataProviderLoginTests extends BaseTest {
         login.setUsername(hashMap.get("username"));
         login.setPassword(hashMap.get("password"));
         Home home = login.clickLoginButton();
-        Assert.assertEquals(home.getTitle(), "Product", "Not expected");
+        Assert.assertEquals(home.getTitle(), "Products", "Not expected");
 
     }
     @Test(dataProviderClass = DataUtil.class, dataProvider = "dataProvider2")

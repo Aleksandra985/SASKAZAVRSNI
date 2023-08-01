@@ -11,7 +11,7 @@ import java.util.Base64;
 import java.util.HashMap;
 
 public class AddToCartTests extends BaseTest {
-    @Test(dataProviderClass = DataUtil.class, dataProvider = "dataProvider")
+    @Test(dataProviderClass = DataUtil.class, dataProvider = "dataProvider1")
     public void addOneItemTest(HashMap<String, String> hashMap) {
         login.setUsername(hashMap.get("username"));
         login.setPassword(hashMap.get("password"));
@@ -20,8 +20,8 @@ public class AddToCartTests extends BaseTest {
         Cart cart = home.clickCart();
         Assert.assertEquals(cart.countItems(), 1, "Not true number of items");
     }
-    @Test(dataProviderClass = DataUtil.class, dataProvider = "dataProvider")
-    public void addSixItemsTest(HashMap<String, String> hashMap) {
+    @Test(dataProviderClass = DataUtil.class, dataProvider = "dataProvider1")
+    public void addSixItemsTest(HashMap<String, String>hashMap) {
         login.setUsername(hashMap.get("username"));
         login.setPassword(hashMap.get("password"));
         Home home = login.clickLoginButton();

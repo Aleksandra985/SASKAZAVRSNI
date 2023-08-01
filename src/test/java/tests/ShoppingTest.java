@@ -9,7 +9,7 @@ import utils.DataUtil;
 import java.util.HashMap;
 
 public class ShoppingTest extends BaseTest{
-    @Test(dataProviderClass = DataUtil.class, dataProvider = "dataProvider")
+    @Test(dataProviderClass = DataUtil.class, dataProvider = "dataProvider1")
     public void shoppingTest(HashMap<String, String> hashMap){
         login.setUsername(hashMap.get("username"));
         login.setPassword(hashMap.get("password"));
